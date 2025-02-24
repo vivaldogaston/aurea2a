@@ -25,8 +25,7 @@ body {
   font-family:Flama;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  align-items: center; 
 
 }
 button{
