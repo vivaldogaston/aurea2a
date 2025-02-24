@@ -8,12 +8,12 @@
   --lightbrown:#D5A260;
 }
 
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+}*/
 @font-face{  
   font-family: "Flama";
   src: url("fonts/flama.otf");
