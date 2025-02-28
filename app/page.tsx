@@ -8,17 +8,21 @@ import mSatisfeito from "@/app/imgs/faces/muito satisfeito.png";
 import neutro from "@/app/imgs/faces/neutro.png";
 import { useState } from "react";
 import { Insert } from "./action";
+import Link from "next/link";
 export default function Home() {
-	const [nome, setNome] = useState("");
+	const [name, setName] = useState("");
 	const [telefone, setTelefone] = useState("");
 	const [comment, setComment] = useState("");
 	const Log = () => {
-		console.log(nome);
+		console.log(name);
 		console.log(telefone);
 		console.log(comment);
 	};
 	return (
 		<div className="">
+			<div className="place-self-end margin-top-5">
+				<Link href={"auth/login"}>Login/SignUp</Link>
+			</div>
 			<Image
 				src={logo}
 				alt="AUREA SDVM, S.A."
@@ -31,8 +35,8 @@ export default function Home() {
 					type="text"
 					placeholder="Nome"
 					className="textBox"
-					onChange={(e) => setNome(e.target.value)}
-					value={nome}
+					onChange={(e) => setName(e.target.value)}
+					value={name}
 				></input>
 				<label>Telefone</label>
 				<input
@@ -92,9 +96,7 @@ export default function Home() {
 						<label>Muito Satisfeito</label>
 					</div>
 				</div>
-				<button onClick={() => Insert({ nome, telefone, comment })}>
-					Enviar
-				</button>
+				<button>Enviar</button>
 			</div>
 		</div>
 	);
